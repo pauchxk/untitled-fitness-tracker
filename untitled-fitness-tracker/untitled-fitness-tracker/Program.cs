@@ -1,3 +1,4 @@
+using Components;
 using Microsoft.EntityFrameworkCore;
 using untitled_fitness_tracker.Components;
 
