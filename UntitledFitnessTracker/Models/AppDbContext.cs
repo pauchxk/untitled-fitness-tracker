@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using UntitledFitnessTracker.Models;
 
-namespace Components;
+namespace UntitledFitnessTracker.Models;
 
 public partial class AppDbContext : DbContext
 {
