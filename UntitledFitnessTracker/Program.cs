@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UntitledFitnessTracker.Models;
 using UntitledFitnessTracker.Components;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddRadzenComponents();
 
 
 var app = builder.Build();
