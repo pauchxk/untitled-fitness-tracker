@@ -1,0 +1,28 @@
+@page "/Kitchen"
+@rendermode InteractiveServer
+@namespace UntitledFitnessTracker.Components
+@using Radzen
+@using Radzen.Blazor
+@using UntitledFitnessTracker.Models
+@using System.Linq
+@using Microsoft.EntityFrameworkCore
+@inject AppDbContext DbContext
+
+<h3>Kitchen</h3>
+
+<RadzenDataGrid Data="@Foods" TItem="Food">
+    <Columns>
+        <RadzenDataGridColumn Property="FoodName" Title="Name"/>
+        <RadzenDataGridColumn Property="FoodGroup" Title="Group"/>
+    </Columns>
+</RadzenDataGrid>
+
+@code
+{
+    public required List<Food> Foods = new List<Food>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Foods = await DbContext.Foods.ToListAsync();
+    }
+}

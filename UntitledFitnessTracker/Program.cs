@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.SqlClient;
 using UntitledFitnessTracker.Models;
 using UntitledFitnessTracker.Components;
 using Radzen;
