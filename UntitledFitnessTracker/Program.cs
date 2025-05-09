@@ -1,6 +1,6 @@
-using Components;
 using Microsoft.EntityFrameworkCore;
-using untitled_fitness_tracker.Components;
+using UntitledFitnessTracker.Models;
+using UntitledFitnessTracker.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
